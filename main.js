@@ -1,14 +1,16 @@
 const { app, BrowserWindow, Menu } = require('electron/main')
 
-Menu.setApplicationMenu(null)
-
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600
+    width: 400,
+    height: 600,
+    icon: 'Assets/images/logo.ico',
   })
 
   win.loadFile('index.html')
+  win.setResizable(null)
+  win.setBackgroundColor('#00FFFF')
+  win.setMenuBarVisibility(false)
 }
 
 app.whenReady().then(() => {
