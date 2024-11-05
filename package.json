@@ -2,6 +2,7 @@
   "name": "christmas-app",
   "version": "1.0.0",
   "description": "A christmas app",
+  "copyright": "Copyright © 2024 ${author}",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
