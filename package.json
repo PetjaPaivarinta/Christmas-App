@@ -1,0 +1,23 @@
+{
+  "name": "christmas-app",
+  "version": "1.0.0",
+  "description": "A christmas app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetjaPaivarinta/Christmas-App.git"
+  },
+  "author": "Petja Paivarinta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PetjaPaivarinta/Christmas-App/issues"
+  },
+  "homepage": "https://github.com/PetjaPaivarinta/Christmas-App#readme",
+  "devDependencies": {
+    "electron": "^33.0.2"
+  }
+}
