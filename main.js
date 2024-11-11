@@ -1,15 +1,25 @@
-const { app, BrowserWindow, Menu } = require('electron/main')
+const { app, BrowserWindow } = require('electron')
+const remoteMain = require('@electron/remote/main')
+
+remoteMain.initialize()
 
 const createWindow = () => {
   const win = new BrowserWindow({
+    frame: false,
+    transparent: true,
     width: 400,
     height: 600,
     icon: 'Assets/images/logo.ico',
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
   })
 
+  remoteMain.enable(win.webContents)
+
   win.loadFile('index.html')
-  win.setResizable(null)
-  win.setBackgroundColor('#00FFFF')
+  win.setResizable(false)
   win.setMenuBarVisibility(false)
 }
 
@@ -23,7 +33,6 @@ app.whenReady().then(() => {
   })
 })
 
-// Quit when all windows are closed, except on macOS. There, it's common for applications and their menu bar to stay active until the user quits explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()

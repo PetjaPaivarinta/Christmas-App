@@ -1,6 +1,43 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
+  overflow: hidden;
+  width: 400px;
+  height: 600px;
+  background-color: green;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#closeBtn:hover {
+  background-color: darkred;
+  transition: 0,3s;
+}
+#closeBtn:active {
+  transform: scale(0.9);
+  transition: 0,3s;
+}
+#playSong {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#playSong:hover {
+  background-color: darkblue;
+  transition: 0,3s;
 }
