@@ -20,5 +20,8 @@
   "homepage": "https://github.com/PetjaPaivarinta/Christmas-App#readme",
   "devDependencies": {
     "electron": "^33.0.2"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2"
   }
 }
